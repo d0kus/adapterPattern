@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args){
+        LegacyPrinter oldPrinter = new LegacyPrinter();
+        Printer legacyPrinter = new LegacyPrinterAdapter(oldPrinter);
 
-        Printer oldPrinter2000 = new LegacyPrinterAdapter();
-        LegacyPrinter legacyPrinter = new LegacyPrinter();
-
-       // legacyPrinter.print();
-        oldPrinter2000.print();
-
-
+        oldPrinter.LegacyPrint();
+        legacyPrinter.print();
     }
 }

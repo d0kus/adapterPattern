@@ -1,7 +1,11 @@
 public class LegacyPrinterAdapter implements Printer{
-    LegacyPrinter oldPrinter = new LegacyPrinter();
+    private final LegacyPrinter legacyPrinter;
+
+    public LegacyPrinterAdapter(LegacyPrinter legPrint){
+        this.legacyPrinter = legPrint;
+    }
     @Override
     public void print(){
-        oldPrinter.LegacyPrint();
+        legacyPrinter.LegacyPrint();
     }
 }
